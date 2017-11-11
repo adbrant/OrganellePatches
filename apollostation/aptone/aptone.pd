@@ -14,7 +14,7 @@
 #X text 299 98 aircraft carrier;
 #X obj 79 317 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 356 321 +~;
+#X obj 319 329 +~;
 #X obj 629 111 read_filter;
 #X obj 56 180 voice;
 #N canvas 0 50 1356 691 mod 0;
@@ -53,6 +53,8 @@
 10 -262144 -1 -1 0 256;
 #X obj 151 59 inlet;
 #X obj 200 606 outlet;
+#X obj 121 85 change -1;
+#X obj 46 108 s mute-\$0;
 #X connect 0 0 3 0;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
@@ -85,8 +87,10 @@
 #X connect 22 6 25 0;
 #X connect 26 0 24 0;
 #X connect 27 0 25 0;
-#X connect 28 0 8 0;
-#X restore 942 587 pd mod;
+#X connect 28 0 30 0;
+#X connect 30 0 31 0;
+#X connect 30 0 8 0;
+#X restore 944 563 pd mod;
 #X obj 807 472 s filt_q;
 #X obj 706 485 s filt_cutoff;
 #X obj 691 378 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
@@ -127,8 +131,10 @@
 #X obj 173 392 list;
 #X obj 470 28 loadbang;
 #X msg 467 53 0;
-#X obj 131 26 inlet;
+#X obj 139 8 inlet;
 #X obj 172 491 outlet;
+#X obj 160 29 change -1;
+#X obj 85 52 s mute-\$0;
 #X connect 0 0 4 0;
 #X connect 0 0 9 0;
 #X connect 1 0 0 0;
@@ -158,8 +164,10 @@
 #X connect 21 0 19 0;
 #X connect 22 0 23 0;
 #X connect 23 0 5 0;
-#X connect 24 0 12 0;
-#X restore 744 582 pd effects;
+#X connect 24 0 26 0;
+#X connect 26 0 12 0;
+#X connect 26 0 27 0;
+#X restore 729 547 pd effects;
 #X obj 465 190 r delaylen;
 #X obj 580 215 r delgain;
 #X obj 432 318 *~ 0;
@@ -177,7 +185,7 @@
 #X msg 1046 429 -12;
 #X msg 1106 423 0;
 #X msg 1136 445 12;
-#N canvas 0 50 1356 691 env 0;
+#N canvas 0 50 1356 691 env 1;
 #X obj 177 180 textfile;
 #X msg 144 148 bang;
 #X msg 181 148 rewind;
@@ -206,8 +214,9 @@
 #X obj 341 460 s release;
 #X obj 267 34 loadbang;
 #X msg 264 59 0;
-#X obj 112 37 inlet;
+#X obj 118 33 inlet;
 #X obj 179 583 outlet;
+#X obj 128 52 change -1;
 #X connect 0 0 3 0;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
@@ -238,8 +247,9 @@
 #X connect 22 0 3 1;
 #X connect 24 0 25 0;
 #X connect 25 0 4 0;
-#X connect 26 0 8 0;
-#X restore 839 588 pd env;
+#X connect 26 0 28 0;
+#X connect 28 0 8 0;
+#X restore 844 564 pd env;
 #X obj 71 72 poly 8, f 11;
 #X obj 110 358 delwrite~ chorusline 250;
 #X obj 369 356 delwrite~ delayline 2000;
@@ -271,17 +281,23 @@
 #X obj 875 183 f;
 #X obj 245 68;
 #X obj 137 41 inlet;
-#X obj 280 548 outlet~;
-#X obj 603 610 s p\$1s1;
+#X obj 235 546 outlet~;
+#X obj 599 631 s p\$1s1;
 #X obj 730 608 s p\$1s4;
-#X obj 825 610 s p\$1s2;
+#X obj 838 622 s p\$1s2;
 #X obj 937 611 s p\$1s3;
-#X obj 944 555 r p\$1k3;
-#X obj 850 561 r p\$1k2;
-#X obj 771 554 r p\$1k4;
+#X obj 946 531 r p\$1k3;
+#X obj 855 537 r p\$1k2;
+#X obj 756 519 r p\$1k4;
 #X obj 584 545 r p\$1k1;
 #X obj 835 50 r p\$1a;
 #X obj 985 361 s p\$1s5;
+#X obj 231 512 quickmute;
+#X obj 297 445 r mute-\$0;
+#X obj 953 588 screensave \$1;
+#X obj 848 591 screensave \$1;
+#X obj 730 576 screensave \$1;
+#X obj 602 610 screensave \$1;
 #X connect 0 0 1 0;
 #X connect 1 0 13 0;
 #X connect 1 0 16 0;
@@ -299,9 +315,9 @@
 #X connect 5 0 2 0;
 #X connect 8 0 4 0;
 #X connect 9 0 2 0;
-#X connect 14 0 77 0;
+#X connect 14 0 88 0;
 #X connect 16 0 34 0;
-#X connect 17 0 81 0;
+#X connect 17 0 90 0;
 #X connect 20 0 19 0;
 #X connect 21 0 18 0;
 #X connect 22 0 31 0;
@@ -313,7 +329,7 @@
 #X connect 26 0 27 0;
 #X connect 26 0 35 0;
 #X connect 27 0 18 0;
-#X connect 28 0 79 0;
+#X connect 28 0 92 0;
 #X connect 29 0 23 0;
 #X connect 29 0 33 0;
 #X connect 30 0 24 1;
@@ -330,7 +346,7 @@
 #X connect 42 0 40 0;
 #X connect 43 0 40 0;
 #X connect 44 0 40 0;
-#X connect 45 0 80 0;
+#X connect 45 0 91 0;
 #X connect 46 0 0 0;
 #X connect 46 1 0 1;
 #X connect 46 2 0 2;
@@ -366,7 +382,7 @@
 #X connect 68 0 8 0;
 #X connect 68 0 74 0;
 #X connect 69 0 62 0;
-#X connect 71 0 78 0;
+#X connect 71 0 93 0;
 #X connect 72 0 73 0;
 #X connect 73 0 74 0;
 #X connect 74 0 65 0;
@@ -376,3 +392,9 @@
 #X connect 84 0 28 0;
 #X connect 85 0 70 0;
 #X connect 86 0 5 0;
+#X connect 88 0 77 0;
+#X connect 89 0 88 1;
+#X connect 90 0 81 0;
+#X connect 91 0 80 0;
+#X connect 92 0 79 0;
+#X connect 93 0 78 0;

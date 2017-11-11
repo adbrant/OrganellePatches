@@ -1,4 +1,4 @@
-#N canvas 0 0 1362 691 10;
+#N canvas -8 -8 1366 725 10;
 #X obj 838 448 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 862 508 qlist;
@@ -213,7 +213,7 @@ sequencer., f 69;
 #X obj 540 285 r edit_mode;
 #X obj 409 464 r step;
 #X obj 446 493 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 7720 256;
+10 -262144 -1 -1 748 256;
 #X obj 421 508 % 16;
 #X obj 423 530 sel 0;
 #X obj 470 568 s sync;
@@ -243,7 +243,7 @@ sequencer., f 69;
 -1 -1;
 #X obj 372 261 + 1;
 #X obj 358 348 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 6000 256;
+10 -262144 -1 -1 3000 256;
 #X obj 396 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 258 343 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
@@ -383,7 +383,6 @@ sequencer., f 69;
 #X connect 113 0 114 0;
 #X connect 113 1 117 0;
 #X connect 114 0 115 0;
-#X connect 116 0 1 0;
 #X connect 117 0 1 0;
 #X connect 119 0 70 0;
 #X connect 120 0 129 0;
