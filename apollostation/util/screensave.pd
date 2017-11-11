@@ -1,4 +1,4 @@
-#N canvas -8 -8 1366 725 10;
+#N canvas 0 50 1366 725 10;
 #X obj 114 72 inlet;
 #X obj 124 203 outlet;
 #X obj 116 152 list;
@@ -9,6 +9,8 @@
 #X obj 123 175 list trim;
 #X obj 115 118 t b a;
 #X obj 227 87 sel \$1;
+#X text 60 15 takes screen value and re-outputs it when page is activated
+;
 #X connect 0 0 7 0;
 #X connect 2 0 6 0;
 #X connect 3 0 8 0;
