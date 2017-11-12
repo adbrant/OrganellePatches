@@ -3,7 +3,7 @@
 #X array wave 337 float 4;
 #X coords 0 1 336 -1 200 100 1 0 0;
 #X restore 431 22 graph;
-#X obj 1188 154 soundfiler;
+#X obj 1189 169 soundfiler;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array wave_2x 674 float 2;
 #X coords 0 1 674 -1 200 100 1 0 0;
@@ -24,9 +24,9 @@
 #X obj 1053 441 tabread wave;
 #X obj 1088 469 tabwrite wave_2x;
 #X obj 835 451 tabread4~ wave_2x;
-#X obj 1191 41 openpanel;
-#X obj 1191 25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1179 16 openpanel;
+#X obj 1179 0 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 1190 226 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
 0 10 -262144 -1 -1 337 256;
 #X obj 1183 341 s wave_2x;
@@ -103,23 +103,23 @@
 #X obj 209 499 list;
 #X msg 143 330 read samples/samples.txt;
 #X msg 209 557 1: Wave \$1;
-#X obj 180 132 change -1;
+#X obj 155 155 change -1;
 #X obj 102 119 int;
 #X obj 105 85 * 64;
 #X obj 152 400 list length;
-#X obj 48 151 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 78 256;
-#X obj 63 120 - 1;
+#X obj 0 200 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 78 256;
+#X obj 47 124 - 1;
 #X obj 66 20 loadbang;
 #X msg 69 64 0;
 #X obj 218 67 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
 10 -262144 -1 -1 0 256;
-#X obj 136 592 outlet;
+#X obj 96 596 outlet;
 #X obj 216 27 inlet;
 #X obj 106 503 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 117 556 list;
-#X obj 117 529 delay 100;
+#X obj 96 524 delay 100;
 #X obj 321 23 r knob1_apt;
 #X obj 212 585 s screenLine1_apt;
 #X obj 329 390 loadbang;
@@ -128,7 +128,12 @@
 #X obj 266 422 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 151 36 del 15;
-#X obj 335 95 t f b;
+#X obj 321 133 t f b;
+#X obj 75 207 change -1;
+#X obj 245 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 436 150 * 256;
+#X obj 473 210 i;
 #X connect 0 0 3 0;
 #X connect 0 0 13 0;
 #X connect 1 0 0 0;
@@ -146,6 +151,7 @@
 #X connect 8 0 0 0;
 #X connect 9 0 25 0;
 #X connect 10 0 5 0;
+#X connect 10 0 33 0;
 #X connect 11 0 10 0;
 #X connect 12 0 11 0;
 #X connect 13 0 15 0;
@@ -165,10 +171,9 @@
 #X connect 29 0 28 0;
 #X connect 30 0 17 0;
 #X connect 31 0 12 0;
-#X connect 31 1 29 0;
-#X restore 1115 86 pd filename;
-#X obj 1114 58 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+#X restore 1110 63 pd filename;
+#X obj 1112 42 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 13 256;
 #X text 1260 275 1 load wave;
 #X text 964 176 2 copy to wave_2x twice;
 #X text 803 322 3 create FFT;
@@ -176,8 +181,13 @@
 FFT \, and write to wavemap;
 #X text 588 500 turn subpatch DSP on/off;
 #X obj 947 83 print;
-#X msg 1152 124 read -resize ./samples/\$1 wave;
+#X msg 1138 147 read -resize ./samples/\$1 wave;
 #X obj 26 323 s mute-\$0;
+#X obj 979 140 s quickmute;
+#X msg 1033 92 100;
+#X obj 1121 109 list;
+#X obj 1118 90 del 50;
+#X obj 1125 130 list trim;
 #X connect 1 0 19 0;
 #X connect 1 0 27 0;
 #X connect 3 0 5 0;
@@ -271,6 +281,12 @@ FFT \, and write to wavemap;
 #X connect 68 0 52 0;
 #X connect 69 0 67 0;
 #X connect 70 0 67 0;
+#X connect 71 0 82 0;
 #X connect 71 0 79 0;
+#X connect 71 0 84 0;
 #X connect 72 0 71 0;
 #X connect 79 0 1 0;
+#X connect 82 0 81 0;
+#X connect 83 0 85 0;
+#X connect 84 0 83 0;
+#X connect 85 0 79 0;
