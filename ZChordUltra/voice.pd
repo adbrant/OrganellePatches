@@ -1,4 +1,4 @@
-#N canvas 0 50 1360 691 10;
+#N canvas -1 28 1356 632 10;
 #X obj 304 155 mtof;
 #X obj 304 191 sig~;
 #X obj 303 325 *~;
@@ -159,7 +159,7 @@ updated;
 #X obj 359 444 osc~ 5;
 #X msg 726 674 0 80;
 #X obj 195 222 r pitch_lop;
-#X obj 237 307 lop~ 32;
+#X obj 237 307 lop~ 100;
 #X connect 0 0 1 0;
 #X connect 1 0 53 0;
 #X connect 2 0 4 0;
