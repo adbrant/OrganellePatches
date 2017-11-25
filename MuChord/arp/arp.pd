@@ -1,4 +1,4 @@
-#N canvas -50 30 1356 633 10;
+#N canvas 0 50 1356 633 10;
 #X obj 725 776 unpack 0 0;
 #X obj 725 836 pack 0 0 0;
 #N canvas 0 50 450 278 (subpatch) 0;
@@ -786,7 +786,7 @@ following elements over 1 place);
 #X restore 411 403 pd singledown2;
 #X obj 462 194 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 463 133 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 463 133 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 463 153 ==;
 #X obj 314 243 spigot 0;
@@ -1112,7 +1112,7 @@ directly to output if disabled;
 #X obj 439 401 r \$0-ticks;
 #X obj 474 442 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 118 107 s \$0-halfticks;
+#X obj 127 75 s \$0-halfticks;
 #X obj 136 28 r eighths;
 #X obj 227 171 r p\$1k2;
 #X obj 221 245 s p\$1s2;
@@ -1142,7 +1142,7 @@ directly to output if disabled;
 #X obj 698 352 t b f;
 #X obj 679 386 f;
 #X obj 693 443 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 2802.63 256;
 #X obj 714 171 /;
 #X msg 708 154 1;
 #X obj 711 135 t b f;
@@ -1158,12 +1158,22 @@ directly to output if disabled;
 #X obj 810 794 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
 10 -262144 -1 -1 0 256;
 #X obj 669 802 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 88 256;
+10 -262144 -1 -1 0 256;
 #X obj 920 937 del 10;
 #X obj 828 912 t b f, f 9;
 #X obj 887 946 del 10;
 #X obj 783 920 del 10;
 #X obj 724 936 del 10;
+#X obj 36 73 loadbang;
+#X obj 41 116 del 15;
+#X msg 42 148 0.3;
+#X obj 556 224 loadbang;
+#X obj 556 244 del 15;
+#X msg 560 270 0.5;
+#X obj 634 303 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 558 288 v p\$1k4;
+#X obj 41 171 v p\$1k1;
 #X connect 0 0 14 0;
 #X connect 0 0 79 0;
 #X connect 0 1 14 1;
@@ -1207,6 +1217,7 @@ directly to output if disabled;
 #X connect 59 0 74 0;
 #X connect 60 0 61 0;
 #X connect 60 0 74 0;
+#X connect 60 0 91 0;
 #X connect 61 0 76 0;
 #X connect 63 0 62 0;
 #X connect 63 0 66 0;
@@ -1233,3 +1244,12 @@ directly to output if disabled;
 #X connect 83 0 6 0;
 #X connect 83 0 84 0;
 #X connect 84 0 15 0;
+#X connect 85 0 86 0;
+#X connect 86 0 87 0;
+#X connect 87 0 54 0;
+#X connect 87 0 93 0;
+#X connect 88 0 89 0;
+#X connect 89 0 90 0;
+#X connect 90 0 74 0;
+#X connect 90 0 61 0;
+#X connect 90 0 92 0;
