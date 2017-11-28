@@ -1,0 +1,37 @@
+#N canvas 3 66 1328 564 10;
+#X declare -path ./util/;
+#X declare -path patchmenu;
+#X obj 87 92 declare -path ./util/;
+#X obj 86 113 declare -path patchmenu;
+#X obj 86 294 patchmenu;
+#X obj 118 207 s enableSubMenu;
+#X obj 86 135 loadbang;
+#X msg 86 207 0;
+#X obj 86 184 t b b;
+#X obj 52 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 44 265 1;
+#X obj 44 233 delay 3000;
+#X obj 86 159 versioncheck 2;
+#X obj 300 394 throw~ outL;
+#X obj 452 350 throw~ outR;
+#X obj 399 206 Guitar2Synth/submodule 1;
+#X msg 86 323 \; screenLine1 Guitar2Arp \; screenLine2 Effect1 \; screenLine3
+Seq/Arp \; screenLine4 Effects \; screenLine5 <-- Home \;;
+#X obj 319 254 FX-13/fxwrapper 2;
+#X obj 441 123 r~ inL;
+#X obj 325 300 FX-13/fxwrapper 3;
+#X connect 2 0 14 0;
+#X connect 4 0 10 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 0;
+#X connect 6 0 9 0;
+#X connect 6 1 3 0;
+#X connect 7 0 6 0;
+#X connect 8 0 2 0;
+#X connect 10 0 6 0;
+#X connect 13 0 15 0;
+#X connect 15 0 17 0;
+#X connect 16 0 13 0;
+#X connect 17 0 11 0;
+#X connect 17 0 12 0;
