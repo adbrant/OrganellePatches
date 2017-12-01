@@ -1,4 +1,4 @@
-#N canvas 3 66 1328 564 10;
+#N canvas 0 0 1276 691 10;
 #X declare -path ./util/;
 #X declare -path patchmenu;
 #X obj 87 92 declare -path ./util/;
@@ -13,15 +13,24 @@
 #X msg 44 265 1;
 #X obj 44 233 delay 3000;
 #X obj 86 159 versioncheck 2;
-#X obj 300 394 throw~ outL;
-#X obj 452 350 throw~ outR;
-#X obj 399 206 Guitar2Synth/submodule 1;
-#X msg 86 323 \; screenLine1 Guitar2Arp \; screenLine2 Effect1 \; screenLine3
-Seq/Arp \; screenLine4 Effects \; screenLine5 <-- Home \;;
+#X obj 308 434 throw~ outL;
+#X obj 444 437 throw~ outR;
+#X obj 329 220 Guitar2Synth/submodule 1;
 #X obj 319 254 FX-13/fxwrapper 2;
-#X obj 441 123 r~ inL;
-#X obj 325 300 FX-13/fxwrapper 3;
-#X connect 2 0 14 0;
+#X obj 323 173 r~ inL;
+#X obj 334 374 FX-13/fxwrapper 4;
+#X obj 327 287 GranularFreeze/submodule 3;
+#X obj 480 333 simplelooper/submodule;
+#X obj 692 254 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 618 221 r p4a;
+#X obj 646 402 screensave 4;
+#X obj 647 454 s p4s5;
+#X obj 591 247 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 86 323 \; screenLine1 Guit2Syn \; screenLine2 FX1 \; screenLine3
+Freeze \; screenLine4 FX2+Loop \; screenLine5 <-- Home \;;
+#X connect 2 0 24 0;
 #X connect 4 0 10 0;
 #X connect 5 0 2 0;
 #X connect 6 0 5 0;
@@ -30,8 +39,16 @@ Seq/Arp \; screenLine4 Effects \; screenLine5 <-- Home \;;
 #X connect 7 0 6 0;
 #X connect 8 0 2 0;
 #X connect 10 0 6 0;
-#X connect 13 0 15 0;
-#X connect 15 0 17 0;
-#X connect 16 0 13 0;
-#X connect 17 0 11 0;
-#X connect 17 0 12 0;
+#X connect 13 0 14 0;
+#X connect 14 0 17 0;
+#X connect 15 0 13 0;
+#X connect 16 0 11 0;
+#X connect 16 1 12 0;
+#X connect 17 0 16 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 18 1 21 0;
+#X connect 19 0 18 1;
+#X connect 20 0 18 1;
+#X connect 20 0 23 0;
+#X connect 21 0 22 0;
