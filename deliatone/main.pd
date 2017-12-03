@@ -1,0 +1,48 @@
+#N canvas 105 224 1356 288 10;
+#X declare -path ./util/;
+#X declare -path patchmenu;
+#X obj 308 274 throw~ outL;
+#X obj 409 278 throw~ outR;
+#X obj 445 125 r notes;
+#X obj 82 100 declare -path ./util/;
+#X obj 81 121 declare -path patchmenu;
+#X obj 81 302 patchmenu;
+#X obj 113 215 s enableSubMenu;
+#X obj 81 143 loadbang;
+#X msg 81 215 0;
+#X obj 81 192 t b b;
+#X obj 47 122 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 39 273 1;
+#X obj 39 241 delay 3000;
+#X obj 81 167 versioncheck 2;
+#X msg 81 331 \; screenLine1 Basic \; screenLine2 Tweaks \; screenLine3
+Arp \; screenLine4 Effects \; screenLine5 <-- Home \;;
+#X obj 402 226 samp/samp_array 1;
+#X obj 772 118 r aux;
+#X obj 235 213 s screenLine5;
+#X obj 767 146 s seq2-1-aux;
+#X obj 469 161 s seq2-1-notes-in;
+#X obj 591 190 r seq2-1-notes-out;
+#X obj 623 223 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 942 199 s screenLine5;
+#X obj 745 186 ./Sequencer2/Sequencer2 1;
+#X obj 933 159 r seq2-1-aux-label;
+#X connect 2 0 15 0;
+#X connect 2 0 19 0;
+#X connect 5 0 14 0;
+#X connect 7 0 13 0;
+#X connect 8 0 5 0;
+#X connect 9 0 8 0;
+#X connect 9 0 12 0;
+#X connect 9 1 6 0;
+#X connect 10 0 9 0;
+#X connect 11 0 5 0;
+#X connect 13 0 9 0;
+#X connect 15 0 0 0;
+#X connect 15 1 1 0;
+#X connect 16 0 18 0;
+#X connect 20 0 21 0;
+#X connect 20 0 15 1;
+#X connect 24 0 22 0;
