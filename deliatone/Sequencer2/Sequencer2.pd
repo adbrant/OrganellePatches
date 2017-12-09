@@ -1,5 +1,14 @@
 #N canvas 85 89 895 512 10;
-#N canvas 7 50 1647 847 seq2 1;
+#X obj 233 223 r seq2-\$1-notes-in;
+#X obj 172 203 r seq2-\$1-aux;
+#X obj 172 283 s seq2-\$1-notes-out;
+#X text 18 8 Sequencer2: A simple sequencer Module.;
+#X text 15 38 Argument1: Module Shortcut Name (seq2);
+#X text 15 58 Argument2: Sequencer2 Instance Number;
+#X text 373 35 uses the input aux button to start / stop / record a
+sequence. Only two inputs needed: (r seq2-\$1-aux) and (r seq2-\$1-notes-in)
+, f 43;
+#N canvas -8 -8 1360 725 seq2 1;
 #X obj 860 408 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 860 508 qlist;
@@ -212,7 +221,9 @@ sequencer., f 69;
 #X msg 488 197 0;
 #X msg 638 199 6;
 #X msg 780 206 1;
+#X obj 799 582 s seq2-\$1-loop;
 #X connect 0 0 1 0;
+#X connect 0 0 131 0;
 #X connect 1 1 6 0;
 #X connect 2 0 36 0;
 #X connect 3 0 55 0;
@@ -348,16 +359,7 @@ sequencer., f 69;
 #X connect 128 0 126 0;
 #X connect 129 0 126 0;
 #X connect 130 0 126 0;
-#X restore 172 246 pd seq2;
-#X obj 233 223 r seq2-\$1-notes-in;
-#X obj 172 203 r seq2-\$1-aux;
-#X obj 172 283 s seq2-\$1-notes-out;
-#X text 18 8 Sequencer2: A simple sequencer Module.;
-#X text 15 38 Argument1: Module Shortcut Name (seq2);
-#X text 15 58 Argument2: Sequencer2 Instance Number;
-#X text 373 35 uses the input aux button to start / stop / record a
-sequence. Only two inputs needed: (r seq2-\$1-aux) and (r seq2-\$1-notes-in)
-, f 43;
-#X connect 0 0 3 0;
-#X connect 1 0 0 1;
-#X connect 2 0 0 0;
+#X restore 172 246 pd seq2 \$1;
+#X connect 0 0 7 1;
+#X connect 1 0 7 0;
+#X connect 7 0 2 0;
