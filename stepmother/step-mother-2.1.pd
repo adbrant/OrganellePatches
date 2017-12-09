@@ -1,14 +1,14 @@
-#N canvas 765 210 674 716 10;
+#N canvas 677 0 674 716 10;
 #X obj 47 144 tgl 15 0 key2 key2 empty 17 7 0 10 -33289 -262144 -1
 0 1;
 #X obj 55 18 vsl 15 96 0 1 0 0 knob1 knob1 empty 0 -9 0 10 -262144
--1 -1 1671 1;
+-1 -1 5574 1;
 #X obj 84 21 vsl 15 96 0 1 0 0 knob2 knob2 empty 0 -9 0 10 -262144
--1 -1 1700 1;
+-1 -1 0 1;
 #X obj 110 22 vsl 15 96 0 1 0 0 knob3 knob3 empty 0 -9 0 10 -262144
--1 -1 4000 1;
+-1 -1 0 1;
 #X obj 136 22 vsl 15 96 0 1 0 0 knob4 knob4 empty 0 -9 0 10 -262144
--1 -1 8550 1;
+-1 -1 0 1;
 #X obj 207 23 vsl 15 96 0 1 0 0 exp exp empty 0 -9 0 10 -262144 -1
 -1 4750 1;
 #X obj 6 178 tgl 15 0 aux aux empty 17 7 0 10 -262144 -1 -1 0 1;
@@ -247,7 +247,7 @@ MIDI;
 #X obj 231 165 tgl 15 0 key15 key15 empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 244 143 tgl 15 0 key16 key16 empty 17 7 0 10 -33289 -262144
--1 0 1;
+-1 1 1;
 #X obj 256 165 tgl 15 0 key17 key17 empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 281 165 tgl 15 0 key18 key18 empty 17 7 0 10 -262144 -1 -1 0
@@ -827,10 +827,10 @@ MIDI;
 #X obj 682 116 == 0;
 #X obj 680 143 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 748 143 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 748 143 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 749 117 == 1;
-#X obj 784 143 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 784 143 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 824 144 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -865,7 +865,7 @@ MIDI;
 #X obj 67 379 r paramchange;
 #X obj 1048 232 s paramchange;
 #X obj 380 368 r sel_param;
-#X obj 380 425 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 380 425 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X floatatom 362 485 5 0 0 0 - - -, f 5;
 #X obj 319 503 +;
@@ -874,7 +874,7 @@ MIDI;
 #X obj 316 455 *;
 #X obj 273 406 r paramchange;
 #X obj 559 372 r sel_param;
-#X obj 559 429 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 559 429 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 541 489 5 0 0 0 - - -, f 5;
 #X obj 498 507 +;
@@ -1421,13 +1421,13 @@ MIDI;
 #X restore 475 90 pd keyboard-keys;
 #X text 203 1 exp;
 #X obj 85 125 tgl 10 0 empty knob2_sel empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 58 125 tgl 10 0 empty knob1_sel empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 139 125 tgl 10 0 empty knob4_sel empty 17 7 0 10 -262144 -1
 -1 0 1;
 #X obj 113 125 tgl 10 0 empty knob3_sel empty 17 7 0 10 -262144 -1
--1 1 1;
+-1 0 1;
 #X obj 208 125 tgl 10 0 empty exp_sel empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 167 125 tgl 10 0 empty vol_sel empty 17 7 0 10 -262144 -1 -1
