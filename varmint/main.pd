@@ -1,0 +1,6 @@
+#N canvas 592 183 450 300 10;
+#X obj 172 97 folder_list;
+#X obj 199 143 print;
+#X msg 173 66 symbol ../24.wav;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

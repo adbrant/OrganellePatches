@@ -2,13 +2,13 @@
 #X obj 47 144 tgl 15 0 key2 key2 empty 17 7 0 10 -33289 -262144 -1
 0 1;
 #X obj 55 18 vsl 15 96 0 1 0 0 knob1 knob1 empty 0 -9 0 10 -262144
--1 -1 2800 1;
+-1 -1 1671 1;
 #X obj 84 21 vsl 15 96 0 1 0 0 knob2 knob2 empty 0 -9 0 10 -262144
--1 -1 5000 1;
+-1 -1 1700 1;
 #X obj 110 22 vsl 15 96 0 1 0 0 knob3 knob3 empty 0 -9 0 10 -262144
--1 -1 4600 1;
+-1 -1 4000 1;
 #X obj 136 22 vsl 15 96 0 1 0 0 knob4 knob4 empty 0 -9 0 10 -262144
--1 -1 8700 1;
+-1 -1 8550 1;
 #X obj 207 23 vsl 15 96 0 1 0 0 exp exp empty 0 -9 0 10 -262144 -1
 -1 4750 1;
 #X obj 6 178 tgl 15 0 aux aux empty 17 7 0 10 -262144 -1 -1 0 1;
@@ -830,11 +830,11 @@ MIDI;
 #X obj 748 143 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 749 117 == 1;
-#X obj 784 143 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 784 143 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 824 144 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 866 146 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 866 146 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 906 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -874,7 +874,7 @@ MIDI;
 #X obj 316 455 *;
 #X obj 273 406 r paramchange;
 #X obj 559 372 r sel_param;
-#X obj 559 429 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 559 429 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X floatatom 541 489 5 0 0 0 - - -, f 5;
 #X obj 498 507 +;
@@ -892,7 +892,7 @@ MIDI;
 #X obj 717 462 *;
 #X obj 674 413 r paramchange;
 #X obj 987 402 r sel_param;
-#X obj 987 459 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 987 459 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 969 519 5 0 0 0 - - -, f 5;
 #X obj 926 537 +;
@@ -1427,9 +1427,9 @@ MIDI;
 #X obj 139 125 tgl 10 0 empty knob4_sel empty 17 7 0 10 -262144 -1
 -1 0 1;
 #X obj 113 125 tgl 10 0 empty knob3_sel empty 17 7 0 10 -262144 -1
--1 0 1;
+-1 1 1;
 #X obj 208 125 tgl 10 0 empty exp_sel empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 167 125 tgl 10 0 empty vol_sel empty 17 7 0 10 -262144 -1 -1
 0 1;
 #N canvas 0 50 450 250 (subpatch) 0;
