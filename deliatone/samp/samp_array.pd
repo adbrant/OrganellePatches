@@ -1,4 +1,4 @@
-#N canvas 547 208 598 417 10;
+#N canvas 546 208 598 417 10;
 #X obj 221 199 outlet~;
 #X obj 15 44 samp_voice 60 72 \$1 \$2;
 #X obj 424 220 outlet~;
@@ -17,6 +17,7 @@
 #X obj 417 106 samp_voice 71 83 \$1 \$2;
 #X connect 1 0 0 0;
 #X connect 1 1 2 0;
+#X connect 3 0 1 0;
 #X connect 3 0 5 0;
 #X connect 3 0 6 0;
 #X connect 3 0 7 0;
@@ -28,7 +29,7 @@
 #X connect 3 0 13 0;
 #X connect 3 0 14 0;
 #X connect 3 0 15 0;
-#X connect 3 0 1 0;
+#X connect 4 0 1 1;
 #X connect 4 0 5 1;
 #X connect 4 0 6 1;
 #X connect 4 0 7 1;
@@ -40,7 +41,6 @@
 #X connect 4 0 13 1;
 #X connect 4 0 14 1;
 #X connect 4 0 15 1;
-#X connect 4 0 1 1;
 #X connect 5 0 0 0;
 #X connect 5 1 2 0;
 #X connect 6 0 0 0;

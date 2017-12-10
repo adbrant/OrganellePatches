@@ -1,4 +1,4 @@
-#N canvas 0 50 1360 725 10;
+#N canvas 0 0 1360 691 10;
 #X obj 172 97 folder_list;
 #X msg 173 66 symbol ../../Samples/*.wav;
 #X obj 172 38 t b b;
@@ -7,7 +7,7 @@
 #X obj 166 133 t a b;
 #X msg 297 106 0;
 #X obj 249 201 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 100 256;
+10 -262144 -1 -1 61 256;
 #X obj 142 21 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 133 176 list append;
@@ -34,6 +34,7 @@
 #X obj 324 438 list split;
 #X msg 358 467 \$1;
 #X obj 347 493 outlet;
+#X obj 292 17 r soundshare_refresh;
 #X connect 0 0 5 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -70,3 +71,4 @@
 #X connect 27 0 28 1;
 #X connect 28 1 29 0;
 #X connect 29 0 30 0;
+#X connect 31 0 2 0;
