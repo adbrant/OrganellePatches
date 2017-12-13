@@ -35,10 +35,10 @@
 #X msg 430 846 1: Tune \$1 cents;
 #X obj 430 801 i;
 #X obj 224 505 *~ 0.3;
-#X obj 169 240 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+#X obj 183 243 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
 10 -262144 -1 -1 0 256;
 #X obj 72 235 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 75 256;
+10 -262144 -1 -1 0 256;
 #X obj 72 264 t f f f;
 #X obj 249 423 +;
 #X obj 52 406 +;
@@ -54,10 +54,10 @@
 #X obj 334 416 sig~ 0;
 #X obj 285 488 *~;
 #X obj 333 440 lop~ 5;
-#N canvas 0 50 1360 725 chordlogic 0;
+#N canvas 0 0 1356 691 chordlogic 0;
 #X obj 205 172 % 12;
 #X obj 208 196 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 3 256;
+10 -262144 -1 -1 0 256;
 #X obj 462 662 outlet;
 #X obj 511 670 outlet;
 #X obj 598 665 outlet;
@@ -90,7 +90,7 @@
 #X obj 233 6 inlet;
 #X obj 348 -6 r recalc;
 #X obj 104 57 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 75 256;
+10 -262144 -1 -1 0 256;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array harm 672 float 3;
 #A 0 0 4 7 11 0 4 7 11 0 3 7 10 0 4 7 11 0 3 7 10 0 4 7 11 0 3 6 10
@@ -143,7 +143,7 @@
 #X obj 73 421 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
 10 -262144 -1 -1 0 256;
 #X obj 313 459 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 11 256;
+10 -262144 -1 -1 0 256;
 #X obj 235 256 +;
 #X obj 56 382 tabread harm;
 #X obj 167 379 tabread harm;
@@ -249,13 +249,13 @@ Wave \;;
 #X obj 607 284 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
 10 -262144 -1 -1 0 256;
 #X obj 293 139 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 75 256;
+10 -262144 -1 -1 0 256;
 #X obj 382 204 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 86 256;
+10 -262144 -1 -1 0 256;
 #X obj 296 187 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 79 256;
+10 -262144 -1 -1 0 256;
 #X obj 366 144 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 82 256;
+10 -262144 -1 -1 0 256;
 #X obj 230 211 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 203 70 0;
@@ -317,7 +317,7 @@ Wave \;;
 #X obj 660 179 - 1;
 #X obj 705 178 abs;
 #X obj 745 240 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 17.3421 256;
+10 -262144 -1 -1 0 256;
 #X msg 1120 77 0.04;
 #X obj 746 190 * 20;
 #X obj 756 216 + 0.3;
