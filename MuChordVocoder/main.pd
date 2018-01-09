@@ -250,9 +250,10 @@ Arp \; screenLine4 Vocoder \; screenLine5 <-- Home \;;
 #X obj 586 202 r raw_fiddle;
 #X obj 603 237 unpack 0 0;
 #X obj 570 268 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 69 256;
 #X obj 647 269 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 107.163 256;
+#X obj 625 123 osc~ 440;
 #X connect 2 0 24 0;
 #X connect 3 0 6 0;
 #X connect 5 0 9 0;
@@ -320,3 +321,4 @@ Arp \; screenLine4 Vocoder \; screenLine5 <-- Home \;;
 #X connect 75 0 76 0;
 #X connect 76 0 77 0;
 #X connect 76 1 78 0;
+#X connect 79 0 74 0;
