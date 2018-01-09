@@ -1,13 +1,13 @@
-#N canvas 88 50 1360 725 10;
-#X obj 172 97 folder_list;
-#X msg 173 66 symbol ../../Samples/*.wav;
-#X obj 172 38 t b b;
+#N canvas 25 90 1360 729 10;
+#X obj 170 113 folder_list;
+#X msg 183 91 symbol ../../Samples/*.wav;
+#X obj 174 25 t b b;
 #X obj 249 178 + 1;
 #X obj 236 139 f 0;
 #X obj 166 133 t a b;
-#X msg 297 106 0;
+#X msg 282 116 0;
 #X obj 249 201 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 54 256;
+10 -262144 -1 -1 70 256;
 #X obj 142 21 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 133 176 list append;
@@ -15,9 +15,9 @@
 #X obj 96 210 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 104 241 list;
-#X obj 174 12 loadbang;
+#X obj 173 4 loadbang;
 #X obj 49 192 * 1;
-#X obj 21 25 inlet;
+#X obj 45 6 inlet;
 #X obj 45 237 int;
 #X obj 52 268 change;
 #X obj 81 284 t b f;
@@ -52,9 +52,12 @@
 #X obj 492 293 t b b;
 #X obj 492 313 del 50;
 #X msg 486 356 1;
+#X obj 662 45 os_check;
+#X obj 178 45 os_switch;
+#X msg 135 70 symbol /tmp/media/samples/*.wav;
 #X connect 0 0 5 0;
 #X connect 1 0 0 0;
-#X connect 2 0 1 0;
+#X connect 2 0 46 0;
 #X connect 2 1 6 0;
 #X connect 3 0 4 1;
 #X connect 3 0 7 0;
@@ -104,3 +107,6 @@
 #X connect 42 1 41 0;
 #X connect 43 0 44 0;
 #X connect 44 0 36 0;
+#X connect 46 0 47 0;
+#X connect 46 1 1 0;
+#X connect 47 0 0 0;
