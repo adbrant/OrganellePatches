@@ -1,0 +1,22 @@
+#N canvas 0 50 1366 725 10;
+#X obj 114 72 inlet;
+#X obj 124 203 outlet;
+#X obj 116 152 list;
+#X floatatom 231 59 5 0 0 0 - - -, f 5;
+#X obj 231 38 r page-ready;
+#X obj 186 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 123 175 list trim;
+#X obj 115 118 t b a;
+#X obj 227 87 sel \$1;
+#X text 60 15 takes screen value and re-outputs it when page is activated
+;
+#X connect 0 0 7 0;
+#X connect 2 0 6 0;
+#X connect 3 0 8 0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 7 0 2 0;
+#X connect 7 1 2 1;
+#X connect 8 0 2 0;

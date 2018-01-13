@@ -1,0 +1,38 @@
+#N canvas 0 50 1356 691 10;
+#X declare -path ./util/;
+#X declare -path patchmenu;
+#X obj 294 546 throw~ outL;
+#X obj 395 550 throw~ outR;
+#X obj 829 142 declare -path ./util/;
+#X obj 828 163 declare -path patchmenu;
+#X obj 828 344 patchmenu;
+#X obj 860 257 s enableSubMenu;
+#X obj 828 185 loadbang;
+#X msg 828 257 0;
+#X obj 828 234 t b b;
+#X obj 794 164 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 786 315 1;
+#X obj 786 283 delay 3000;
+#X obj 828 209 versioncheck 2;
+#X text 21 30 chord harmonizer with arpeggiator and fx;
+#X obj 350 152 r notes;
+#X obj 470 68 r aux;
+#X obj 330 490 FX-13/fxwrapper 3;
+#X msg 827 375 \; screenLine1 Shep 1 \; screenLine2 Shep 2 \; screenLine3
+FX \; screenLine4 \; screenLine5 <-- Home \;;
+#X obj 377 229 shepardtone/shepard 1 2;
+#X connect 4 0 17 0;
+#X connect 6 0 12 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 8 0 11 0;
+#X connect 8 1 5 0;
+#X connect 9 0 8 0;
+#X connect 10 0 4 0;
+#X connect 12 0 8 0;
+#X connect 14 0 18 0;
+#X connect 15 0 18 1;
+#X connect 16 0 0 0;
+#X connect 16 1 1 0;
+#X connect 18 0 16 0;

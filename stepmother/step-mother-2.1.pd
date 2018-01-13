@@ -2,13 +2,13 @@
 #X obj 47 144 tgl 15 0 key2 key2 empty 17 7 0 10 -33289 -262144 -1
 0 1;
 #X obj 55 18 vsl 15 96 0 1 0 0 knob1 knob1 empty 0 -9 0 10 -262144
--1 -1 5450 1;
+-1 -1 5550 1;
 #X obj 84 21 vsl 15 96 0 1 0 0 knob2 knob2 empty 0 -9 0 10 -262144
--1 -1 7350 1;
+-1 -1 2450 1;
 #X obj 110 22 vsl 15 96 0 1 0 0 knob3 knob3 empty 0 -9 0 10 -262144
--1 -1 4750 1;
+-1 -1 4450 1;
 #X obj 136 22 vsl 15 96 0 1 0 0 knob4 knob4 empty 0 -9 0 10 -262144
--1 -1 4750 1;
+-1 -1 3350 1;
 #X obj 207 23 vsl 15 96 0 1 0 0 exp exp empty 0 -9 0 10 -262144 -1
 -1 4750 1;
 #X obj 6 178 tgl 15 0 aux aux empty 17 7 0 10 -262144 -1 -1 0 1;
@@ -33,7 +33,7 @@
 run through a compressor to provide some headroom if things get too
 loud. Also sends values to the Organelle's OLED VU meter.;
 #X obj 742 360 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10160 1;
+-1 -1 12700 1;
 #X obj 742 326 r vol;
 #X obj 198 178 *~ 2;
 #X obj 444 450 tabwrite~ scope;
@@ -268,7 +268,7 @@ MIDI;
 ;
 #X text 3 151 aux;
 #X obj 167 23 vsl 15 96 0 1 0 0 vol vol empty 0 -9 0 10 -262144 -1
--1 7600 1;
+-1 9500 1;
 #X obj 239 61 bng 15 250 50 0 send-all-vals empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 6 129 cnv 17 17 17 empty empty empty 20 12 0 14 -33289 -262144
@@ -836,7 +836,7 @@ MIDI;
 1;
 #X obj 866 146 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 906 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 906 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 786 117 == 2;
 #X obj 825 118 == 3;
@@ -902,7 +902,7 @@ MIDI;
 #X obj 880 440 r paramchange;
 #X obj 1166 406 r sel_param;
 #X obj 1166 463 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X floatatom 1148 523 5 0 0 0 - - -, f 5;
 #X obj 1105 541 +;
 #X obj 1102 568 max 0;
@@ -1196,8 +1196,8 @@ MIDI;
 #X connect 81 0 74 1;
 #X connect 82 0 75 1;
 #X restore 475 112 pd desktop-stuff;
-#X obj 7 130 cnv 15 15 15 empty led-canvas empty 20 12 0 14 -1 -262144
-0;
+#X obj 7 130 cnv 15 15 15 empty led-canvas empty 20 12 0 14 -241291
+-262144 0;
 #X text 154 1 volume;
 #X text 227 42 resend;
 #X symbolatom 282 42 24 0 0 0 - print3 -, f 24;
@@ -1431,7 +1431,7 @@ MIDI;
 #X obj 208 125 tgl 10 0 empty exp_sel empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 167 125 tgl 10 0 empty vol_sel empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array scope 1000 float 0;
 #X coords 0 -0.3 1000 0.3 200 100 1 0 0;
