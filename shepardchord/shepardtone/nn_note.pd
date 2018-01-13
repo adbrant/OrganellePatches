@@ -1,0 +1,42 @@
+#N canvas 0 50 1366 725 10;
+#X obj 162 294 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 4 256;
+#X obj 154 255 expr $f1%12;
+#X obj 146 189 i;
+#X obj 146 227 expr ($f1-$f2);
+#X obj 146 363 -;
+#X obj 116 154 t f f b b;
+#X obj 146 393 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 100 256;
+#X floatatom 226 202 5 0 0 0 - - -, f 5;
+#X obj 268 530 max;
+#X obj 237 156 unpack 0 0;
+#X obj 239 180 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 76 256;
+#X obj 300 208 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 226 449 * 0;
+#X obj 252 405 min 1;
+#X obj 87 94 inlet;
+#X obj 257 122 inlet;
+#X obj 315 491 inlet;
+#X obj 277 564 outlet;
+#X connect 0 0 4 1;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 5 1 2 0;
+#X connect 6 0 12 0;
+#X connect 7 0 3 1;
+#X connect 8 0 17 0;
+#X connect 9 0 10 0;
+#X connect 9 1 11 0;
+#X connect 10 0 7 0;
+#X connect 11 0 13 0;
+#X connect 12 0 8 0;
+#X connect 13 0 12 1;
+#X connect 14 0 5 0;
+#X connect 15 0 9 0;
+#X connect 16 0 8 1;

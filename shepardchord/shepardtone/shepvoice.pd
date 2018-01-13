@@ -1,4 +1,4 @@
-#N canvas -8 -8 1366 725 12;
+#N canvas 0 50 1366 725 12;
 #X obj 156 262 pack 0 50;
 #X obj 96 185 pack 0 50;
 #X obj 29 298 inlet~;
@@ -29,7 +29,7 @@
 #X text 321 215 peak width controlled by "dropoff";
 #X obj 131 344 *~ 0.25;
 #X obj 294 263 nbx 10 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
-0 10 -262144 -1 -1 1.776 256;
+0 10 -262144 -1 -1 6.21883 256;
 #X obj 295 285 nearest_note;
 #X obj 300 313 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
 10 -262144 -1 -1 0 256;
@@ -40,6 +40,7 @@
 #X obj 513 452 spigot 1;
 #X obj 696 397 == 0;
 #X obj 626 379 > 0;
+#X obj 221 197 r lopf;
 #X connect 0 0 4 0;
 #X connect 1 0 3 0;
 #X connect 2 0 6 0;
@@ -71,3 +72,4 @@
 #X connect 36 0 16 0;
 #X connect 37 0 36 1;
 #X connect 38 0 35 1;
+#X connect 39 0 32 1;
