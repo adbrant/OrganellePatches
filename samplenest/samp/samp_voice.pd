@@ -1,7 +1,7 @@
 #N canvas 11 50 1356 663 10;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array \$0-sample 494886 float 2;
-#X coords 0 1 494886 -1 200 140 1;
+#X array \$0-sample 533023 float 2;
+#X coords 0 1 533023 -1 200 140 1;
 #X restore 20 246 graph;
 #X obj 661 630 outlet~;
 #X obj 611 496 tabread4~ \$0-sample;
@@ -9,7 +9,7 @@
 #X obj 637 137 max 100;
 #X obj 648 169 / 44100;
 #X obj 597 297 nbx 5 14 -1e+037 1e+037 0 0 empty empty freq 0 -8 0
-10 -262144 -1 -1 0.321026 256;
+10 -262144 -1 -1 0.17174 256;
 #X obj 595 214 expr 1/$f1;
 #X obj 85 102 list;
 #X obj 176 100 f \$0;
@@ -68,7 +68,7 @@ re-enable;
 #X obj 969 69 t b b b b;
 #X msg 1177 165 0;
 #X obj 1124 64 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 1176 188 s sampparam_off;
 #X obj 707 -26 inlet;
 #X obj 615 -9 inlet;
@@ -91,23 +91,23 @@ re-enable;
 #X floatatom 221 206 10 0 0 2 sample_size #0-samplesize -, f 10;
 #X msg 225 95 2: End \$1;
 #X obj 89 138 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0.648665 256;
+10 -262144 -1 -1 0.390254 256;
 #X obj 228 144 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
 10 -262144 -1 -1 1 256;
 #X obj 114 199 -;
 #X obj 157 118 t b f;
 #X obj 120 263 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0.351335 256;
+10 -262144 -1 -1 0.609746 256;
 #X obj 121 281 * 44100;
 #X obj 123 314 nbx 5 14 -1e+037 1e+037 0 0 empty empty samplen 0 -8
-0 10 -262144 -1 -1 173871 256;
+0 10 -262144 -1 -1 325008 256;
 #X obj 223 230 t b f;
 #X obj 97 354 s \$0-slen;
 #X obj 139 245 f 1;
 #X obj 173 186 min 0;
 #X obj 214 267 f 0;
 #X obj 200 327 nbx 5 14 -1e+037 1e+037 0 0 empty empty offset 0 -8
-0 10 -262144 -1 -1 321015 256;
+0 10 -262144 -1 -1 208015 256;
 #X obj 222 292 * 44100;
 #X obj 299 343 nbx 5 14 -1e+037 1e+037 0 0 empty empty dir 0 -8 0 10
 -262144 -1 -1 1 256;
@@ -183,7 +183,7 @@ re-enable;
 #X obj 620 354 *~ 1;
 #X obj 476 500 *~ 0;
 #X obj 528 289 != 1;
-#N canvas 0 50 1356 714 loopstyle 0;
+#N canvas 0 50 1356 714 loopstyle 1;
 #X obj 127 165 int;
 #X obj 128 145 * 4;
 #X obj 127 188 sel 0 1 2 3;
@@ -202,7 +202,6 @@ re-enable;
 #X msg 329 269 0;
 #X msg 287 271 1;
 #X obj 294 301 s \$0-pp;
-#X obj 66 184 loadbang;
 #X obj 116 118 samp_param \$1 \$4 3 1;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
@@ -214,7 +213,7 @@ re-enable;
 #X connect 3 0 11 0;
 #X connect 3 0 14 0;
 #X connect 3 0 15 0;
-#X connect 4 0 19 0;
+#X connect 4 0 18 0;
 #X connect 5 0 8 0;
 #X connect 5 0 11 0;
 #X connect 5 0 14 0;
@@ -234,8 +233,7 @@ re-enable;
 #X connect 14 0 4 0;
 #X connect 15 0 17 0;
 #X connect 16 0 17 0;
-#X connect 18 0 3 0;
-#X connect 19 0 1 0;
+#X connect 18 0 1 0;
 #X restore 41 440 pd loopstyle;
 #X msg 255 431 4: Env \$1;
 #X obj 317 574;
@@ -294,11 +292,11 @@ re-enable;
 #X obj 719 403 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1039 523 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
-0 10 -262144 -1 -1 0 256;
+0 10 -262144 -1 -1 0.787145 256;
 #X obj 1055 503 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
-0 10 -262144 -1 -1 0 256;
+0 10 -262144 -1 -1 5821.97 256;
 #X obj 569 149 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 173871 256;
+10 -262144 -1 -1 325008 256;
 #X obj 273 138 list;
 #X obj 791 506 samp_param \$1 \$3 4 0.8;
 #X obj 990 308 samp_param \$1 \$3 2 0.33333;

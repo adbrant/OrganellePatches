@@ -17,7 +17,7 @@
 #X obj 39 241 delay 3000;
 #X obj 81 167 versioncheck 2;
 #X obj 852 100 s seq2-1-aux;
-#X obj 338 134 r seq2-1-notes-out;
+#X obj 338 127 r seq2-1-notes-out;
 #X obj 354 210 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1027 153 s screenLine5;
@@ -26,7 +26,7 @@
 #X obj 512 173 spigot 0;
 #X msg 574 126 \$1;
 #X obj 593 145 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 60 256;
+10 -262144 -1 -1 0 256;
 #X obj 597 165 < 72;
 #X obj 502 143 t a a;
 #X obj 522 204 s seq2-1-notes-in;
@@ -162,7 +162,7 @@ Mix \; screenLine4 fx \; screenLine5 <-- Home \;;
 #X connect 40 0 9 0;
 #X connect 41 0 8 0;
 #X restore 448 422 pd fx;
-#N canvas 805 53 552 397 recorder 1;
+#N canvas 805 53 552 397 recorder 0;
 #X obj 118 58 inlet~;
 #X obj 115 177 soundshare/soundshare_recsync~ dt;
 #X obj 258 68 r p3a;
