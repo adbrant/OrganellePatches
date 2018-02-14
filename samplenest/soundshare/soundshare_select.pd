@@ -39,6 +39,7 @@
 #X obj 109 42 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 295 30 r soundshare_refresh;
+#X obj 394 207 - 0.05;
 #X connect 0 0 31 0;
 #X connect 0 1 4 0;
 #X connect 1 0 2 1;
@@ -47,7 +48,7 @@
 #X connect 3 0 7 0;
 #X connect 3 1 2 0;
 #X connect 4 0 2 1;
-#X connect 5 0 12 1;
+#X connect 5 0 35 0;
 #X connect 6 0 0 0;
 #X connect 7 0 8 0;
 #X connect 8 0 7 1;
@@ -80,3 +81,4 @@
 #X connect 32 0 29 0;
 #X connect 33 0 31 0;
 #X connect 34 0 0 0;
+#X connect 35 0 12 1;
