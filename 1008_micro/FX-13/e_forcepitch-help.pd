@@ -22,7 +22,7 @@ is then pitched using a delayline-based pitchshifter.;
 #X obj 531 372 soundoutput;
 #X obj 655 227 *~ 0;
 #X obj 654 206 osc~ 440;
-#X obj 654 183 mtof_micro;
+#X obj 654 183 mtof;
 #X floatatom 654 160 5 0 0 0 - - -;
 #X obj 656 338 sigmund~ pitch;
 #X floatatom 656 363 5 0 0 0 - - -;

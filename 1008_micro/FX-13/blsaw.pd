@@ -7,7 +7,7 @@
 #X obj 88 257 *~;
 #X obj 88 281 clip~ -0.5 0.5;
 #X floatatom 201 115 0 0 0 0 - - -;
-#X obj 201 139 mtof_micro;
+#X obj 201 139 mtof;
 #X text 288 92 band limit (MIDI units);
 #X obj 198 63 loadbang;
 #X obj 88 305 *~ 1000;

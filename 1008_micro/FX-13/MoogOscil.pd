@@ -10,7 +10,7 @@
 #X msg 282 364 Cutoff \$1 Hz;
 #X obj 85 206 pack 0 50;
 #X obj 85 233 line~;
-#X obj 85 172 mtof_micro;
+#X obj 85 172 mtof;
 #X obj 85 147 * 120;
 #X obj 173 335 osc~;
 #X obj 172 367 *~, f 10;

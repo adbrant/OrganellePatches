@@ -14,7 +14,7 @@
 #X obj 131 311 *~;
 #X msg 132 162 0.8 10 \, 0 20 10;
 #X msg 274 296 delayfreq \$1;
-#X obj 274 255 mtof_micro;
+#X obj 274 255 mtof;
 #X obj 132 77 inlet;
 #X obj 130 426 outlet~;
 #X obj 299 332 loadbang;
