@@ -1,4 +1,4 @@
-#N canvas -8 -8 1366 725 10;
+#N canvas 0 0 1366 725 10;
 #X obj 270 77 stripnote;
 #X obj 270 164 % 24;
 #X obj 270 138 abs;
@@ -95,6 +95,7 @@
 #X msg 984 275 read playing_\$1.txt;
 #X msg 1067 296 read offset_\$1.txt;
 #X msg 1114 317 read div_\$1.txt;
+#X obj 129 630 s pb-\$2-notes-raw;
 #X connect 0 0 57 0;
 #X connect 1 0 20 0;
 #X connect 2 0 1 0;
@@ -119,6 +120,7 @@
 #X connect 17 0 21 0;
 #X connect 17 1 21 1;
 #X connect 18 0 17 0;
+#X connect 18 0 79 0;
 #X connect 19 0 18 0;
 #X connect 20 0 5 0;
 #X connect 21 0 24 0;
