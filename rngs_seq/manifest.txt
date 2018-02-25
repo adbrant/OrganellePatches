@@ -1,0 +1,12 @@
+4c82337679bca56739f9f14862d0d94ec45b92d5  rngs/KontrolModule.pd_linux
+5c42b894a4a526c443eb22f0bb83e0c9e71c8f29  rngs/libmec-kontrol-api.so
+9702efffc1f7d6e094bdafad305f4718e3f3ae06  rngs/clds~.pd_linux
+2d80f1e5134c2f089295f6b193d186272364edcd  rngs/libmec-utils.so
+6c6053b8cf598ed6051f5d7f37d015f748ccbd1e  rngs/libportaudio.so
+6bce427745f6b80be05cf8f339312a33c3fe4962  rngs/rngs~.pd_linux
+2408cc71c76f200817c5b35e7b0deee0e8ad5f01  rngs/main.pd
+5cdcd2a4b2e4117e678b463e220e2d6e571ef010  rngs/liboscpack.so
+4a451fb4702edf9092a4f62de3abd102085e0d99  rngs/libcjson.so
+297683c6781b77bdf6de028904b9d4b7aa348933  rngs/rngs-module.json
+4e57cf7d13452f91933daf76865dd3a13a2878b6  rngs/KontrolRack.pd_linux
+ae0bac0db7ac33ae4e017f108f07d0371c39e716  rngs/rings-rack.json
