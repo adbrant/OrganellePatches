@@ -1,1 +1,2 @@
-C:/Users/alexd_000/Documents/PD/OrganellePatches/Samples/HHOP.WAV;
+C:/Users/alexd_000/Documents/PD/OrganellePatches/Samples/hornads.wav
+;

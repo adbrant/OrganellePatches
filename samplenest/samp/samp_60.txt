@@ -1,2 +1,2 @@
-C:/Users/alexd_000/Documents/PD/OrganellePatches/Samples/pianos.wav
+C:/Users/alexd_000/Documents/PD/OrganellePatches/Samples/strinf.wav
 ;
