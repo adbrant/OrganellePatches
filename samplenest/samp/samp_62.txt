@@ -1,2 +1,1 @@
-C:/Users/alexd_000/Documents/PD/OrganellePatches/Samples/TR-808Ride01.wav
-;
+C:/Users/alexd_000/Documents/PD/OrganellePatches/Samples/HHOP.WAV;

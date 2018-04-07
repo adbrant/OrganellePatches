@@ -1,2 +1,2 @@
-C:/Users/alexd_000/Documents/PD/OrganellePatches/Samples/guitet.wav
+C:/Users/alexd_000/Documents/PD/OrganellePatches/Samples/stirsnd.wav
 ;
