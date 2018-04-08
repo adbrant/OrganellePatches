@@ -1,1 +1,2 @@
-C:/Users/alexd_000/Documents/PD/OrganellePatches/Samples/jh.wav;
+C:/Users/alexd_000/Documents/PD/OrganellePatches/Samples/spaceship.wav
+;
