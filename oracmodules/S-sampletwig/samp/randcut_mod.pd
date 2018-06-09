@@ -1,10 +1,10 @@
-#N canvas 137 50 1366 729 10;
+#N canvas -6 1 1356 714 10;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-plot 40000 float 2;
 #X coords 0 1 40000 -1 200 280 1 0 0;
 #X restore 1012 352 graph;
 #X obj 58 291 loop~;
-#X msg 73 239 bang;
+#X msg 113 253 bang;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-plot2 40000 float 2;
 #X coords 0 1 40000 0 200 140 1 0 0;
@@ -21,8 +21,8 @@
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
-#X restore 32 382 pd rand~;
-#X obj 32 425 samphold~;
+#X restore 7 363 pd rand~;
+#X obj 14 420 samphold~;
 #X obj 142 271 max~ 64;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-plot4 40000 float 2;
@@ -35,7 +35,7 @@
 #X obj 544 549 *~ 20000;
 #X obj 464 521 +~;
 #X obj 329 158 nbx 10 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
-0 10 -262144 -1 -1 307543 256;
+0 10 -262144 -1 -1 174682 256;
 #N canvas 0 50 450 300 rand~ 0;
 #X obj 95 148 outlet~;
 #X obj 123 64 noise~;
@@ -59,7 +59,7 @@
 #X obj 788 371 expr~ tanh($v1*$v2);
 #X obj 821 315 sig~ 1;
 #X obj 816 217 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 9.38601e-006 256;
+10 -262144 -1 -1 0 256;
 #X obj 799 289 / 10;
 #X obj 144 481 *~;
 #X obj 332 534 *~ 1;
@@ -68,7 +68,7 @@
 #X text 228 24 looplen;
 #X obj 615 651 outlet~;
 #X obj 857 601 outlet~;
-#X obj 41 90 inlet;
+#X obj 34 57 inlet;
 #X obj 617 173 inlet;
 #X text 598 133 on//off;
 #X obj 696 280 sig~ 0;
@@ -76,7 +76,7 @@
 #X obj 673 512 max~ 1;
 #X obj 659 300 == 0;
 #X obj 695 420 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 1 256;
+10 -262144 -1 -1 0 256;
 #X obj 572 601 *~ 0;
 #X text 492 60 env;
 #X obj 477 637 tabwrite~ \$0-plot4;
@@ -84,12 +84,14 @@
 -1 -1;
 #X obj 500 213 * -1;
 #X obj 520 159 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 1889.88 256;
+10 -262144 -1 -1 8 256;
 #X obj 505 246 + 2010;
 #X obj 530 263 / 2000;
 #X obj 542 338 * 200;
 #X obj 534 287 pow 6;
 #X obj 494 184 / 3;
+#X obj 107 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 1 0 6 0;
 #X connect 1 0 9 1;
 #X connect 1 0 17 1;
