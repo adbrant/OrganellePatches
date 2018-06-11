@@ -253,7 +253,7 @@
 #X obj 791 239 s rngs_params;
 #X msg 791 202 trig \$1;
 #X obj 262 185 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 88.46 256;
+10 -262144 -1 -1 0 256;
 #X obj 312 157 + 1.46;
 #X connect 0 0 3 0;
 #X connect 3 0 1 0;
@@ -309,7 +309,7 @@
 #X obj 503 45 r notes_seq;
 #X obj 188 210 notein_mono;
 #X obj 182 259 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 87 256;
+10 -262144 -1 -1 0 256;
 #X floatatom 261 262 5 0 0 0 - - -, f 5;
 #X obj 271 329 > 0;
 #X connect 2 0 14 0;
