@@ -1,0 +1,64 @@
+#N canvas 1 50 1359 725 10;
+#X obj 218 236 outlet~;
+#X obj 84 228 outlet~;
+#X obj 379 243 outlet;
+#N canvas 0 50 450 463 notegen 0;
+#X obj 109 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 120 14 inlet;
+#X obj 108 138 f 0;
+#X obj 104 99 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 142 92 + 1;
+#X obj 152 134 % 4;
+#X obj 122 174 sel 0 1 2 3;
+#X msg 114 208 60;
+#X msg 214 207 67;
+#X obj 117 345 outlet;
+#X obj 294 153 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 150 312 pack 0 0;
+#X msg 148 208 62;
+#X msg 174 208 65;
+#X obj 127 69 metro 400;
+#X msg 156 40 stop;
+#X obj 128 250 makenote 100 300;
+#X connect 0 0 14 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 2 0 6 0;
+#X connect 2 0 10 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 1;
+#X connect 6 0 7 0;
+#X connect 6 1 12 0;
+#X connect 6 2 13 0;
+#X connect 6 3 8 0;
+#X connect 7 0 16 0;
+#X connect 8 0 16 0;
+#X connect 11 0 9 0;
+#X connect 12 0 16 0;
+#X connect 13 0 16 0;
+#X connect 14 0 3 0;
+#X connect 15 0 14 0;
+#X connect 16 0 11 0;
+#X connect 16 1 11 1;
+#X restore 528 109 pd notegen;
+#X obj 540 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 195 183 readsf~;
+#X msg 247 164 open 1.wav;
+#X obj 195 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 194 132 t b b;
+#X msg 198 160 1;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 1 0;
+#X connect 5 1 0 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 6 0;
+#X connect 9 0 5 0;
