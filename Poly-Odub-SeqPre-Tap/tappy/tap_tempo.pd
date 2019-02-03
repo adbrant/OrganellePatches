@@ -58,6 +58,7 @@
 #X text 506 140 start calculating after 4 measurements;
 #X obj 140 21 inlet;
 #X obj 361 408 outlet;
+#X obj 347 304 change -1;
 #X connect 0 0 1 0;
 #X connect 1 0 10 0;
 #X connect 2 0 5 0;
@@ -109,6 +110,7 @@
 #X connect 35 0 39 0;
 #X connect 36 0 35 0;
 #X connect 37 0 36 0;
-#X connect 38 0 43 0;
+#X connect 38 0 44 0;
 #X connect 40 0 24 0;
 #X connect 42 0 2 0;
+#X connect 44 0 43 0;
