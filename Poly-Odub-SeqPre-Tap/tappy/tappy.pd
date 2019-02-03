@@ -1,5 +1,5 @@
-#N canvas 0 50 450 300 10;
-#X obj 32 35 r cgSc-1-5;
+#N canvas 4 50 450 300 10;
+#X obj 133 30 r cgSc-1-5;
 #X obj 86 254 s cgSc-1-5label;
 #X obj 188 98 tap_tempo;
 #X obj 96 142 sel 0 1;
@@ -8,14 +8,15 @@
 #X obj 245 214 outlet;
 #X msg 200 173 Tap:\$1;
 #X obj 15 140 loadbang;
-#X obj 152 61 sel 1;
+#X obj 152 61 sel 0;
 #X connect 0 0 9 0;
 #X connect 2 0 3 0;
 #X connect 2 1 6 0;
 #X connect 2 1 7 0;
+#X connect 3 0 4 0;
 #X connect 3 1 5 0;
 #X connect 4 0 1 0;
 #X connect 5 0 1 0;
 #X connect 7 0 1 0;
 #X connect 8 0 4 0;
-#X connect 9 0 2 0;
+#X connect 9 1 2 0;
