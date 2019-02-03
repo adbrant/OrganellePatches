@@ -1,9 +1,0 @@
-#N canvas 1 50 1359 725 10;
-#X obj 186 41 inlet~;
-#X obj 90 48 inlet~;
-#X obj 129 102 dac~;
-#X obj 467 42 inlet;
-#X obj 462 105 print outtest;
-#X connect 0 0 2 1;
-#X connect 1 0 2 0;
-#X connect 3 0 4 0;
